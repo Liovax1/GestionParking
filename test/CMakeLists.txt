@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(testProjet)
+
+#1/3-Ajouter les dossiers/fichiers.cpp du projet
+set(SRCS2
+#    ${CMAKE_SOURCE_DIR}/Dossier/file.cpp
+    )
+
+#2/3-Ajouter les dossiers/fichiers.h du projet
+set(HEADERS2
+#    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.h
+    )
+
+#3/3-Ajouter les dossiers/fichiers.cpp des tests unitaires
+set(TST_SRCS
+#    TestVoitureE1.cpp
+#    TestClientParkingE1.cpp
+    testProjet.cpp
+    )
+
+include(CTest)
+include(${CMAKE_BINARY_DIR}/conan-dependencies/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+add_executable(${PROJECT_NAME} ${TST_SRCS} ${SRCS2} ${HEADERS2})
+target_link_libraries(${PROJECT_NAME} CONAN_PKG::catch2)
+
+#DEBUT - Ancienne configuration de catch2
+#target_link_libraries(${PROJECT_NAME} ${CMAKE_PROJECT_NAME})
+#find_package(Catch2 REQUIRED)
+#target_link_libraries(testProjet PRIVATE Catch2::Catch2)
+#target_include_directories(testProjet PRIVATE ${CMAKE_SOURCE_DIR})
+#enable_testing()
+#include(Catch)
+#catch_discover_tests(testProjet)
+#FIN - Ancienne configuration de catch2
+
+add_test(NAME testPro COMMAND ${PROJECT_NAME})
