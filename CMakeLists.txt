@@ -8,7 +8,7 @@ set (CMAKE_BUILD_TYPE "Debug" CACHE
 
 project(${ProjectId} LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #1/3-Ajouter les fichiers sources de votre projet
