@@ -1,11 +1,11 @@
 # Fichier pour l'intégration continue
 
 
-# Image Docker à utiliser sidimage
-# sidimage contient build-essential, Catch2 et cmake 3.21
+# Image Docker à utiliser cppimage2
+# cppimage2 contient build-essential, conan, ninja, gcovr
 # 
 
-image: sidimage
+image: cppimage2
 
 #pour l'inclusion des sous modules Git
 variables:
@@ -15,7 +15,8 @@ stages:
   - build
   - test
   - coverage
-  - check
+#  - documentation
+#  - check
 
 #Job de compilation
 job:build:
@@ -25,8 +26,8 @@ job:build:
   stage: build
   #Si il y a des actions à lancer avant le script
   before_script:
-     - apt update && apt -y install ninja-build python3-pip gcovr
-     - python3 -m pip install conan
+ #    - apt update && apt -y install ninja-build python3-pip gcovr
+ #    - python3 -m pip install conan
   script:
     #execution de cmake
     - mkdir build && cd build
@@ -49,6 +50,8 @@ job:test:
   #  - ctest test/testProjet --no-compress-output --output-on-failure --output-junit Test.xml
   artifacts:
     when: always
+    paths:
+    - build/test/bin/catch_results.xml
     reports:
 #      junit: build/Test.xml
       junit: build/test/bin/catch_results.xml
@@ -57,8 +60,8 @@ job:test:
 run tests:
   stage: coverage
   before_script:
-    - apt update && apt -y install ninja-build python3-pip gcovr
-    - python3 -m pip install conan
+#    - apt update && apt -y install ninja-build python3-pip gcovr
+#    - python3 -m pip install conan
   script:
     - cd build
     - conan install -s build_type=Debug -if conan-dependencies ..
@@ -72,6 +75,23 @@ run tests:
     expire_in: 2 days
     reports:
       cobertura: build/coverage.xml
+    paths:
+     - build/coverage
+
+job:documentation:
+#  only:
+#    - master
+#    - tags
+  stage: documentation
+  before_script:
+#     - apt update && apt -y install doxygen graphviz
+  script:
+     - doxygen Doxyfile
+     - mv html/ public/
+  artifacts:
+    paths:
+      - public
+
 
 
 #job:cpp-check:
