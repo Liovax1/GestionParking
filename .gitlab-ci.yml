@@ -15,7 +15,7 @@ stages:
   - build
   - test
   - coverage
-#  - documentation
+  - documentation
 #  - check
 
 #Job de compilation
