@@ -1,9 +1,7 @@
-# Fichier pour l'intégration continue
-
+# Fichier pour l'intégration continue des projets C++
 
 # Image Docker à utiliser cppimage2
 # cppimage2 contient build-essential, conan, ninja, gcovr
-# 
 
 image: cppimage2
 
@@ -26,14 +24,14 @@ job:build:
   stage: build
   #Si il y a des actions à lancer avant le script
   before_script:
- #    - apt update && apt -y install ninja-build python3-pip gcovr
- #    - python3 -m pip install conan
+
   script:
     #execution de cmake
     - mkdir build && cd build
     - conan install -s build_type=Debug -if conan-dependencies ..
     - cmake -GNinja ..
     - ninja
+ #Décommenter la ligne ci-dessous pour avoir le rapport de tests complet   
  #   - ctest test/testProjet --no-compress-output --output-on-failure --output-junit Test.xml
   #création de l'archive contenant le build téléchargeable
   artifacts:
@@ -47,21 +45,18 @@ job:test:
   script:
     - cd build/test/bin
     - ./testProjet --reporter junit --out catch_results.xml
-  #  - ctest test/testProjet --no-compress-output --output-on-failure --output-junit Test.xml
   artifacts:
     when: always
     paths:
     - build/test/bin/catch_results.xml
     reports:
-#      junit: build/Test.xml
       junit: build/test/bin/catch_results.xml
           
 # Job pour le coverage de l'application    
 run tests:
   stage: coverage
   before_script:
-#    - apt update && apt -y install ninja-build python3-pip gcovr
-#    - python3 -m pip install conan
+
   script:
     - cd build
     - conan install -s build_type=Debug -if conan-dependencies ..
@@ -79,12 +74,12 @@ run tests:
      - build/coverage
 
 job:documentation:
+#Décommenter les lignes ci-dessous pour ne générer la documentation que pour les commits sur master et/ou les tags  
 #  only:
 #    - master
 #    - tags
   stage: documentation
   before_script:
-#     - apt update && apt -y install doxygen graphviz
   script:
      - doxygen Doxyfile
      - mv html/ public/
@@ -93,7 +88,7 @@ job:documentation:
       - public
 
 
-
+##Job de check du code - inactif pour l'instant
 #job:cpp-check:
 #  stage: check
 #  before_script:
