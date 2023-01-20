@@ -13,16 +13,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #1/3-Ajouter les fichiers sources de votre projet
 set(SRCS
+Client_parking/client_parking.cpp
 #   Dossier/classe.cpp
     )
 
 #2/3-Ajouter les fichiers headers de votre projet
 set(HEADERS
+    Client_parking/client_parking.h
 #   Dossier/classe.h
     )
 
 #3/3-Ajouter les noms des dossiers de vos modules
-#include_directories(Dossier)
+include_directories(Client_parking)
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
