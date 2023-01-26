@@ -1,3 +1,11 @@
+/**
+ * @file main.c
+ * @brief Projet GestionParking
+ * @author Liova Hovakimyan
+ * @version 1.0
+ * @date 26/01/2023
+ */
+
 #ifndef CLIENT_PARKING_H
 #define CLIENT_PARKING_H
 
