@@ -7,8 +7,17 @@
  */
 
 #include "client_parking.h"
+#include <iostream>
+
+using namespace std;
 
 Client_parking::Client_parking()
-{
 
-}
+    : _nom("Nom")
+    , _prenom("Prenom")
+
+Client_parking::~Client_parking();
+
+
+
+
