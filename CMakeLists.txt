@@ -4,7 +4,7 @@ get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 string(REPLACE " " "_" ProjectId ${ProjectId})
 
 set (CMAKE_BUILD_TYPE "Debug" CACHE
-      STRING "Choose the type of build.")
+    STRING "Choose the type of build.")
 
 project(${ProjectId} LANGUAGES CXX)
 
@@ -13,16 +13,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #1/3-Ajouter les fichiers sources de votre projet
 set(SRCS
-#   Dossier/classe.cpp
-    )
+    Voiture/voiture.cpp
+)
 
 #2/3-Ajouter les fichiers headers de votre projet
 set(HEADERS
-#   Dossier/classe.h
-    )
+    Voiture/voiture.h
+)
 
 #3/3-Ajouter les noms des dossiers de vos modules
-#include_directories(Dossier)
+include_directories(Voiture)
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
