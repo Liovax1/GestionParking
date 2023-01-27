@@ -1,3 +1,11 @@
+/**
+ * @file voiture.h
+ * @brief Librairie Classe Voiture
+ * @author Yann CATTARIN
+ * @version 1.00
+ * @date 27/01/2023
+ */
+
 #ifndef VOITURE_H
 #define VOITURE_H
 
