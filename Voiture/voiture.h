@@ -9,9 +9,9 @@ public:
     Voiture();
     ~Voiture();
     Voiture(string marque, string modele, string immatriculation);
-    string getMarque;
+    string getMarque();
     void setMarque(string marque);
-    string getModele;
+    string getModele();
     void setModele(string modele);
     string getImmatriculation();
     void setImmatriculation(string immatriculation);

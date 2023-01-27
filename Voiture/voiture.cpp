@@ -6,35 +6,35 @@ using namespace std;
 
 /**
  * @fn  Voiture::Voiture()
- * @brief initialisation d'une voiture
+ * @brief Initialisation d'une voiture
  */
 
 Voiture::Voiture()
-    : _marque("Marque_defaut")
-    , _modele("Modele_defaut")
+    : _marque("Marque par défaut")
+    , _modele("Modèle par defaut")
     , _immatriculation("XX-XXX-XX")
 {
-    cout << "une nouvelle voiture " << endl;
+    cout << "Oh! Une nouvelle voiture !!" << endl;
 }
 
 /**
 * @fn Voiture::~Voiture()
-* @brief Detruire la voiture
+* @brief Détruire la voiture
 */
 
 
 Voiture::~Voiture()
 {
-    cout << "Aurevoir  ma voiture " << endl;
+    cout << "Au revoir ma voiture ... :(" << endl;
 
 }
 
 /**
  * @fn  Voiture::Voiture(string marque , string modele , string immatriculation)
  * @brief initialisation d'une voiture
- * @param string marque : marque de la voiture
- * @param string modele : modele de la voiture
- * @param string immatriculation : immatriculation de la voiture
+ * @param string marque : Marque de la voiture
+ * @param string modele : Modele de la voiture
+ * @param string immatriculation : Immatriculation de la voiture
  */
 
 
@@ -43,7 +43,7 @@ Voiture::Voiture(string marque , string modele , string immatriculation)
     , _modele(modele)
     , _immatriculation(immatriculation)
 {
-    cout << "une nouvelle voiture " << endl;
+    cout << "Oh! Une nouvelle voiture !! " << endl;
 }
 
 
@@ -53,8 +53,8 @@ string Voiture::getMarque()
 }
 /**
      * @fn  void Voiture::setMarque(string marque)
-     * @brief mutateur de la Marque de la voiture
-     * @param string marque : marque de la voiture
+     * @brief mutateur de la marque de la voiture
+     * @param string marque : Marque de la voiture
      */
 
 void Voiture::setMarque(string marque)
@@ -78,7 +78,7 @@ string Voiture::getModele()
 
 /**
  * @fn  void Voiture::setModele(string modele)
- * @param string modele : modele de la voiture
+ * @param string modele : Modele de la voiture
  * @brief mutateur du modele de la voiture
  */
 
@@ -100,7 +100,7 @@ string Voiture::getImmatriculation()
 }
 /**
  * @fn  void Voiture::setImmatriculation(string immatriculation)
- * @param string immatriculation : immatriculation de la voiture
+ * @param string immatriculation : Immatriculation de la voiture
  * @brief mutateur de l'immatriculation de la voiture
  */
 
