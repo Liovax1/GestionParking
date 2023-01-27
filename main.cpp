@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * @file main.c
  * @brief Projet GestionParking
  * @author Liova Hovakimyan
@@ -8,11 +9,22 @@
 
 #include <iostream>
 #include "client_parking.h"
+=======
+ * @file main.cpp
+ * @brief Voiture
+ * @author Yann CATTARIN
+ * @version 1.00
+ * @date 27/01/2023
+ */
+>>>>>>> Voiture
 
+#include <iostream>
+#include "voiture.h"
 using namespace std;
 
 int main()
 {
+<<<<<<< HEAD
     Client_parking client ("Thorvald", "Linus");
     cout << "Nom = " << client.getNom() << endl;
     cout << "Prenom = " << client.getPrenom() << endl;
@@ -27,6 +39,27 @@ int main()
 
     cout << "Nom = " << nouveauClient.getNom() << endl;
     cout << "Prenom = " << nouveauClient.getPrenom() << endl;
+=======
+    Voiture voiture_1("Porsche", "Cayenne", "AA-007-XD");
+    Voiture voiture_2;
+    cout << "Marque Voiture 1: " << voiture_1.getMarque() << endl;
+    cout << "Modèle Voiture 1: " << voiture_1.getModele() << endl;
+    cout << "Immatriculation Voiture 1: " << voiture_1.getImmatriculation() << endl;
+
+    cout << "Marque Voiture 2: " << voiture_2.getMarque() << endl;
+    cout << "Modèle Voiture 2: " << voiture_2.getModele() << endl;
+    cout << "Immatriculation Voiture 2: " << voiture_2.getImmatriculation() << endl;
+
+    cout << "Initialisation des valeurs de la voiture 2: " << endl;
+    voiture_2.setMarque("Buggati");
+    voiture_2.setModele("Chiron");
+    voiture_2.setImmatriculation("JP-700-BC");
+
+    cout << "Affichage après initialisation des valeurs de la voiture 2: " << endl;
+    cout << "Marque Voiture 2: " << voiture_2.getMarque() << endl;
+    cout << "Modèle Voiture 2: " << voiture_2.getModele() << endl;
+    cout << "Immatriculation Voiture 2: " << voiture_2.getImmatriculation() << endl;
+>>>>>>> Voiture
 
     return 0;
 }
