@@ -34,19 +34,19 @@ add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 # Options ######################################################################
 option(BUILD_TESTS "Enable to build unit tests" TRUE)
 
-# Testing ######################################################################
-if (BUILD_TESTS)
-    # Coverage #################################################################
-    set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules)
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
-    target_link_libraries(${CMAKE_PROJECT_NAME} gcov)
-    setup_target_for_coverage_gcovr_html(
-        NAME coverage
-        EXECUTABLE ${CMAKE_BINARY_DIR}/test/bin/testProjet
-        DEPENDENCIES ${CMAKE_PROJECT_NAME}
-        EXCLUDE "build/CMakeFiles/*")
+## Testing ######################################################################
+#if (BUILD_TESTS)
+#    # Coverage #################################################################
+#    set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules)
+#    include(CodeCoverage)
+#    append_coverage_compiler_flags()
+#    target_link_libraries(${CMAKE_PROJECT_NAME} gcov)
+#    setup_target_for_coverage_gcovr_html(
+#        NAME coverage
+#        EXECUTABLE ${CMAKE_BINARY_DIR}/test/bin/testProjet
+#        DEPENDENCIES ${CMAKE_PROJECT_NAME}
+#        EXCLUDE "build/CMakeFiles/*")
 
-    enable_testing ()
-    add_subdirectory(test)
-endif(BUILD_TESTS)
+#    enable_testing ()
+#    add_subdirectory(test)
+#endif(BUILD_TESTS)

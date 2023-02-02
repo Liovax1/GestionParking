@@ -1,5 +1,5 @@
 /**
- * @file main.c
+ * @file client_parking.cpp
  * @brief Projet GestionParking
  * @author Liova Hovakimyan
  * @version 1.0
@@ -14,46 +14,67 @@ using namespace std;
 
 /**
  * @fn Client_parking::Client_parking()
- * @brief Nom et Prenom initial du nouveau client.
+ * @brief initialisation.
  * @param Client_parking().
  * @return aucune.
  */
 
 Client_parking::Client_parking()
     : _nom("Nom_defaut")
-    , _prenom("Prenom_defaut"){
-    cout << "Nom et Prenom initial du nouveau client : " <<endl;
+    , _prenom("Prenom_defaut")
+    , _voiture() {
+    cout << "Initialisation : " <<endl;
+}
+
+/**
+ * @fn  void Client_parking::afficherInfoClientParking()
+ * @brief Afficher les informations du client.
+ * @param aucun.
+ * @return aucune.
+ */
+
+void Client_parking::afficherInfoClientParking()
+{
+    cout << "Nom = " << getNom();
+    cout << "Prenom = " << getPrenom();
+    //cout << "Voiture = " << getVoiture();
+}
+
+/**
+ * @fn Client_parking::Client_parking(string nom, string prenom, string marqueV, string modeleV, string immatriculationV)
+ * @brief Initialisation du client.
+ * @param string nom = nom du client
+ * @param string prenom = prenom du client
+ * @param string marqueV = marque de la voiture
+ * @param string modeleV = modele de la voiture
+ * @param string immatriculationV = immatriculation de la voiture
+ * @return aucune.
+ */
+
+Client_parking::Client_parking(string nom, string prenom, string marqueV, string modeleV, string immatriculationV)
+    : _nom(nom)
+    , _prenom(prenom)
+    , _voiture(marqueV, modeleV, immatriculationV){
+    cout << "Creation infos du client : " << endl;
 }
 
 /**
  * @fn Client_parking::~Client_parking()
  * @brief Destruction du client.
- * @param ~Client_parking().
+ * @param aucun.
  * @return aucune.
  */
 
 Client_parking::~Client_parking()
-{cout << "Destruction nom et prenom" << endl;
+{cout << "Le client a ete detruit" << endl;
 }
 
-/**
- * @fn Client_parking::Client_parking(string nom, string prenom)
- * @brief Initialisation du client.
- * @param Client_parking(string nom, string prenom).
- * @return aucune.
- */
-
-Client_parking::Client_parking(string nom, string prenom)
-    : _nom(nom)
-    , _prenom(prenom){
-    cout << "Nom et Prenom du client : " << endl;
-}
 
 /**
- * @fn Client_parking::getNom()
+ * @fn string Client_parking::getNom()
  * @brief Acces a la valeur de l'attribut Nom.
  * @param aucun.
- * @return aucune.
+ * @return Nom du client.
  */
 
 string Client_parking::getNom()
@@ -62,7 +83,7 @@ string Client_parking::getNom()
 }
 
 /**
- * @fn Client_parking::setNom(string nom)
+ * @fn void Client_parking::setNom(string nom)
  * @brief Modification de la valeur de l'attribut Nom.
  * @param setNom(string nom).
  * @return aucune.
@@ -73,10 +94,10 @@ void Client_parking::setNom(string nom) {
 }
 
 /**
- * @fn Client_parking::getPrenom()
+ * @fn string Client_parking::getPrenom()
  * @brief Acces a la valeur de l'attribut Prenom.
  * @param aucun.
- * @return aucune.
+ * @return Prenom du client.
  */
 
 string Client_parking::getPrenom()
@@ -85,7 +106,7 @@ string Client_parking::getPrenom()
 }
 
 /**
- * @fn Client_parking::setPrenom(string prenom)
+ * @fn void Client_parking::setPrenom(string prenom)
  * @brief Modification de la valeur de l'attribut Prenom.
  * @param setPrenom(string prenom).
  * @return aucune.
@@ -95,66 +116,27 @@ void Client_parking::setPrenom(string prenom) {
     this-> _prenom = prenom;
 }
 
-
-//afficherInfoClientParking()
-
 /**
- * @fn Client_Parking::Client_Parking()
- * @brief Informations initial du nouveau client.
- * @param Client_Parking().
- * @return aucune.
+ * @fn Voiture Client_parking::getVoiture()
+ * @brief Acces aux informations de la voiture.
+ * @param getVoiture().
+ * @return Voiture du client
  */
 
-Client_Parking::Client_Parking()
-    : _nom("Nom_defaut")
-    , _prenom("Prenom_defaut")
-    , _marqueV ("Marque_defaut")
-    , _modeleV ("Marque_defaut")
-    , _immatriculationV ("Marque_defaut"){
-    cout << "Informations initial du nouveau client : " <<endl;
-}
-//Client_Parking::Client_Parking()
-//    : _voiture("Nom_defaut")
-//    {
-//    cout << "Informations initial du nouveau client : " <<endl;
-//}
-
-/**
- * @fn Client_Parking::~Client_Parking()
- * @brief Destruction informations du client.
- * @param ~Client_Parking().
- * @return aucune.
- */
-
-Client_Parking::~Client_Parking()
-{cout << "Destruction Informations du client" << endl;
+Voiture Client_parking::getVoiture()
+{
+    return this-> _voiture;
 }
 
 /**
- * @fn Client_Parking::Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation)
- * @brief Informations du client.
- * @param Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation).
+ * @fn void Client_parking::setVoiture(Voiture voiture)
+ * @brief Modifications des informations de la voiture
+ * @param setVoiture(Voiture voiture).
  * @return aucune.
  */
 
-Client_Parking::Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation)
-    : _nom(nom)
-    , _prenom(prenom)
-    , _marqueV(marque)
-    , _modeleV(modele)
-    , _immatriculationV(immatriculation){
-    cout << "Informations du client : " << endl;
+void Client_parking::setVoiture(Voiture voiture)
+{
+    this-> _voiture = voiture;
 }
 
-/**
- * @fn Client_Parking::getVoiture()
- * @brief Acces a la valeur de l'attribut Voiture.
- * @param aucun.
- * @return aucune.
- */
-
-
-//string Client_Parking::getVoiture()
-//{
-//    return this-> _voiture;
-//}

@@ -15,9 +15,15 @@ using namespace std;
 int main()
 {
 
-    Client_parking client ("Thorvald", "Linus");
+    Client_parking client ("Thorvald", "Linus", "Porsche", "Cayenne", "AA-007-XD");
     cout << "Nom = " << client.getNom() << endl;
     cout << "Prenom = " << client.getPrenom() << endl;
+
+    Voiture voiture_1("Porsche", "Cayenne", "AA-007-XD");
+    Voiture voiture_2;
+    cout << "Marque Voiture 1: " << voiture_1.getMarque() << endl;
+    cout << "Modèle Voiture 1: " << voiture_1.getModele() << endl;
+    cout << "Immatriculation Voiture 1: " << voiture_1.getImmatriculation() << endl;
 
     Client_parking nouveauClient;
     cout << "Nom = " << nouveauClient.getNom() << endl;
@@ -29,12 +35,6 @@ int main()
 
     cout << "Nom = " << nouveauClient.getNom() << endl;
     cout << "Prenom = " << nouveauClient.getPrenom() << endl;
-
-    Voiture voiture_1("Porsche", "Cayenne", "AA-007-XD");
-    Voiture voiture_2;
-    cout << "Marque Voiture 1: " << voiture_1.getMarque() << endl;
-    cout << "Modèle Voiture 1: " << voiture_1.getModele() << endl;
-    cout << "Immatriculation Voiture 1: " << voiture_1.getImmatriculation() << endl;
 
     cout << "Marque Voiture 2: " << voiture_2.getMarque() << endl;
     cout << "Modèle Voiture 2: " << voiture_2.getModele() << endl;
