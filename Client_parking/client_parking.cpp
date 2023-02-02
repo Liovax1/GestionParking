@@ -7,7 +7,7 @@
  */
 
 #include "client_parking.h"
-//#include "voiture.h"
+#include "voiture.h"
 #include <iostream>
 
 using namespace std;
@@ -98,5 +98,63 @@ void Client_parking::setPrenom(string prenom) {
 
 //afficherInfoClientParking()
 
+/**
+ * @fn Client_Parking::Client_Parking()
+ * @brief Informations initial du nouveau client.
+ * @param Client_Parking().
+ * @return aucune.
+ */
+
+Client_Parking::Client_Parking()
+    : _nom("Nom_defaut")
+    , _prenom("Prenom_defaut")
+    , _marqueV ("Marque_defaut")
+    , _modeleV ("Marque_defaut")
+    , _immatriculationV ("Marque_defaut"){
+    cout << "Informations initial du nouveau client : " <<endl;
+}
+//Client_Parking::Client_Parking()
+//    : _voiture("Nom_defaut")
+//    {
+//    cout << "Informations initial du nouveau client : " <<endl;
+//}
+
+/**
+ * @fn Client_Parking::~Client_Parking()
+ * @brief Destruction informations du client.
+ * @param ~Client_Parking().
+ * @return aucune.
+ */
+
+Client_Parking::~Client_Parking()
+{cout << "Destruction Informations du client" << endl;
+}
+
+/**
+ * @fn Client_Parking::Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation)
+ * @brief Informations du client.
+ * @param Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation).
+ * @return aucune.
+ */
+
+Client_Parking::Client_Parking(string nom, string prenom, string marque, string modele, string immatriculation)
+    : _nom(nom)
+    , _prenom(prenom)
+    , _marqueV(marque)
+    , _modeleV(modele)
+    , _immatriculationV(immatriculation){
+    cout << "Informations du client : " << endl;
+}
+
+/**
+ * @fn Client_Parking::getVoiture()
+ * @brief Acces a la valeur de l'attribut Voiture.
+ * @param aucun.
+ * @return aucune.
+ */
 
 
+//string Client_Parking::getVoiture()
+//{
+//    return this-> _voiture;
+//}
