@@ -3,20 +3,22 @@ project(testProjet)
 
 #1/3-Ajouter les dossiers/fichiers.cpp du projet
 set(SRCS2
-#    ${CMAKE_SOURCE_DIR}/Dossier/file.cpp
-    )
+    ${CMAKE_SOURCE_DIR}/Voiture/voiture.cpp
+    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.cpp
+)
 
 #2/3-Ajouter les dossiers/fichiers.h du projet
 set(HEADERS2
-#    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.h
-    )
+    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.h
+    ${CMAKE_SOURCE_DIR}/Voiture/voiture.h
+)
 
 #3/3-Ajouter les dossiers/fichiers.cpp des tests unitaires
 set(TST_SRCS
-#    TestVoitureE1.cpp
-#    TestClientParkingE1.cpp
+    1-TU_client_parking_E1.cpp
+    1-TU_voiture_E1.cpp
     testProjet.cpp
-    )
+)
 
 include(CTest)
 include(${CMAKE_BINARY_DIR}/conan-dependencies/conanbuildinfo.cmake)
