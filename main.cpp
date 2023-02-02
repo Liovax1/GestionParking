@@ -1,10 +1,9 @@
 /**
-<<<<<<< HEAD
  * @file main.c
  * @brief Projet GestionParking
- * @author Liova Hovakimyan Yann CATTARIN
+ * @author Liova Hovakimyan & Yann CATTARIN
  * @version 1.0
- * @date 26/01/2023
+ * @date 02/02/2023
  */
 
 #include <iostream>
