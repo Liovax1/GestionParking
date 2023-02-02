@@ -2,29 +2,20 @@
 <<<<<<< HEAD
  * @file main.c
  * @brief Projet GestionParking
- * @author Liova Hovakimyan
+ * @author Liova Hovakimyan Yann CATTARIN
  * @version 1.0
  * @date 26/01/2023
  */
 
 #include <iostream>
 #include "client_parking.h"
-=======
- * @file main.cpp
- * @brief Voiture
- * @author Yann CATTARIN
- * @version 1.00
- * @date 27/01/2023
- */
->>>>>>> Voiture
+//#include "voiture.h"
 
-#include <iostream>
-#include "voiture.h"
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
+
     Client_parking client ("Thorvald", "Linus");
     cout << "Nom = " << client.getNom() << endl;
     cout << "Prenom = " << client.getPrenom() << endl;
@@ -39,7 +30,7 @@ int main()
 
     cout << "Nom = " << nouveauClient.getNom() << endl;
     cout << "Prenom = " << nouveauClient.getPrenom() << endl;
-=======
+
     Voiture voiture_1("Porsche", "Cayenne", "AA-007-XD");
     Voiture voiture_2;
     cout << "Marque Voiture 1: " << voiture_1.getMarque() << endl;
@@ -59,7 +50,7 @@ int main()
     cout << "Marque Voiture 2: " << voiture_2.getMarque() << endl;
     cout << "Modèle Voiture 2: " << voiture_2.getModele() << endl;
     cout << "Immatriculation Voiture 2: " << voiture_2.getImmatriculation() << endl;
->>>>>>> Voiture
+
 
     return 0;
 }
