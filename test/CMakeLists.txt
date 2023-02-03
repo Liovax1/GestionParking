@@ -17,6 +17,7 @@ set(HEADERS2
 set(TST_SRCS
     1-TU_client_parking_E1.cpp
     1-TU_voiture_E1.cpp
+    2-TU_composition_CP_Voiture_E2.cpp
     testProjet.cpp
 )
 

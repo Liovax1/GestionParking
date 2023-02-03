@@ -18,8 +18,8 @@ using namespace std;
  */
 
 Voiture::Voiture()
-    : _marque("Marque par défaut")
-    , _modele("Modèle par defaut")
+    : _marque("Marque_defaut")
+    , _modele("Modele_defaut")
     , _immatriculation("XX-XXX-XX")
 {
     cout << "Oh! Une nouvelle voiture !!" << endl;

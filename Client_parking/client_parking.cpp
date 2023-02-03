@@ -20,8 +20,8 @@ using namespace std;
  */
 
 Client_parking::Client_parking()
-    : _nom("Nom_defaut")
-    , _prenom("Prenom_defaut")
+    : _nom("nom_defaut")
+    , _prenom("prenom_defaut")
     , _voiture() {
     cout << "Initialisation : " <<endl;
 }

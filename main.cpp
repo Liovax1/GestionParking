@@ -15,9 +15,9 @@ using namespace std;
 int main()
 {
 
-    Client_parking client ("Thorvald", "Linus", "Porsche", "Cayenne", "AA-007-XD");
-    cout << "Nom = " << client.getNom() << endl;
-    cout << "Prenom = " << client.getPrenom() << endl;
+    Client_parking Torvald ("Torvald", "Linus", "Porsche", "Cayenne", "AA-007-XD");
+    cout << "Nom = " << Torvald.getNom() << endl;
+    cout << "Prenom = " << Torvald.getPrenom() << endl;
 
     Voiture voiture_1("Porsche", "Cayenne", "AA-007-XD");
     Voiture voiture_2;
