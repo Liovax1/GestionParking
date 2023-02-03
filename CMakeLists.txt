@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SRCS
     Client_parking/client_parking.cpp
     Voiture/voiture.cpp
+    Badge/badge.cpp
     #   Dossier/classe.cpp
 )
 
@@ -22,12 +23,15 @@ set(SRCS
 set(HEADERS
     Client_parking/client_parking.h
     Voiture/voiture.h
+    Badge/badge.h
     #   Dossier/classe.h
 )
 
 #3/3-Ajouter les noms des dossiers de vos modules
 include_directories(Client_parking)
 include_directories(Voiture)
+include_directories(Badge)
+
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
