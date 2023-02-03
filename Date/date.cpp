@@ -2,12 +2,10 @@
 /**
 * @file date.cpp
 * @brief Classe responsable de la gestion de la date
-* @brief Déclaration des méthodes de la classe
-* @author sepro
-* @version V2.0
-* @date 15/01/2021
+* @author Yann CATTARIN
+* @version v1.0
+* @date 02/02/2023
 */
-
 
 using namespace std;
 
@@ -33,8 +31,6 @@ Date::Date(const Date &D)
     , _annee(D._annee)
 {
 }
-
-
 
 ostream &operator<<(ostream &ostr, const Date &d)
 {
