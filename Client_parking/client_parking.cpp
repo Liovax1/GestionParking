@@ -37,7 +37,6 @@ void Client_parking::afficherInfoClientParking()
 {
     cout << "Nom = " << getNom();
     cout << "Prenom = " << getPrenom();
-    //cout << "Voiture = " << getVoiture();
 }
 
 /**
