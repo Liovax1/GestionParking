@@ -3,13 +3,16 @@ project(testProjet)
 
 #1/3-Ajouter les dossiers/fichiers.cpp du projet
 set(SRCS2
+    ${CMAKE_SOURCE_DIR}/Voiture/voiture.cpp
+    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.cpp
     ${CMAKE_SOURCE_DIR}/Date/date.cpp
 
 )
 
 #2/3-Ajouter les dossiers/fichiers.h du projet
 set(HEADERS2
-
+    ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.h
+    ${CMAKE_SOURCE_DIR}/Voiture/voiture.h
     ${CMAKE_SOURCE_DIR}/Date/date.h
 )
 
