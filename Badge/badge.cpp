@@ -7,78 +7,83 @@
  */
 
 #include "badge.h"
-//#include "date.h"
+#include "date.h"
 #include <iostream>
 using namespace std;
 
-//Badge::Badge()
-//    : _numero("******")
-//    , _debut_validite("01/01/1900")
-//    , _fin_validite("31/12/2022")
-//{
-//    cout << "Initialisation : " << endl;
-//}
+Badge::Badge()
+    : _numero("******")
+    , _debut_validite("01/01/1900")
+    , _fin_validite("31/12/2022")
+{
+    cout << "Initialisation : " << endl;
+}
 
-//string Badge::getNumero()
-//{
-//    return this-> _numero;
-//}
+Badge::~Badge(){
 
-//void Badge::setNumero(string numero) {
-//    this-> _numero = numero;
-//}
-
-//string Badge::getDebutValidite()
-//{
-//    return this -> _debut_validite;
-//}
-
-//void Badge::setDebutValidite(Date debut_validite) {
-//    this-> _debut_validite = debut_validite;
-//}
-
-//string Badge::getFinValidite()
-//{
-//    return this-> _fin_validite;
-//}
-
-//void Badge::setFinValidite(Date fin_validite) {
-//    this-> _fin_validite = fin_validite;
-//}
+}
 
 
+string Badge::getNumero()
+{
+    return this-> _numero;
+}
 
-//Badge::Badge(string numero, unsigned int debutJ, unsigned int debutM, unsigned int debutA, unsigned int finJ, unsigned int finM, unsigned int finA)
-//    : _numero(numero)
-//    , _debut_validite(debutJ, debutM, debutA)
-//    , _fin_validite(finJ, finM, finA){
-//    cout << "Creation badge du client : " << endl;
-//}
+void Badge::setNumero(string numero) {
+    this-> _numero = numero;
+}
 
-//string Badge::getNumero()
-//{
-//    return this-> _numero;
-//}
+Date Badge::getDebutValidite()
+{
+    return this -> _debut_validite;
+}
 
-//void Badge::setNumero(string numero) {
-//    this-> _numero = numero;
-//}
+void Badge::setDebutValidite(Date debut_validite) {
+    this-> _debut_validite = debut_validite;
+}
 
-//Date Badge::getDebutValidite()
-//{
-//    return this -> _debut_validite;
-//}
+Date Badge::getFinValidite()
+{
+    return this-> _fin_validite;
+}
 
-//void Badge::setDebutValidite (Date debut_validite)
-//{
-//    this-> _debut_validite = debut_validite;
+void Badge::setFinValidite(Date fin_validite) {
+    this-> _fin_validite = fin_validite;
+}
 
 
-//    Date Badge::getFinValidite()
-//    {
-//        return this -> _fin_validite;
-//    }
 
-//    void Badge::setFinValidite (Date fin_validite)
-//    {
-//        this-> _fin_validite = fin_validite;
+Badge::Badge(string numero, unsigned int debutJ, unsigned int debutM, unsigned int debutA, unsigned int finJ, unsigned int finM, unsigned int finA)
+    : _numero(numero)
+    , _debut_validite(debutJ, debutM, debutA)
+    , _fin_validite(finJ, finM, finA){
+    cout << "Creation badge du client : " << endl;
+}
+
+string Badge::getNumero()
+{
+    return this-> _numero;
+}
+
+void Badge::setNumero(string numero) {
+    this-> _numero = numero;
+}
+
+Date Badge::getDebutValidite()
+{
+    return this -> _debut_validite;
+}
+
+void Badge::setDebutValidite (Date debut_validite)
+{
+    this-> _debut_validite = debut_validite;
+
+
+    Date Badge::getFinValidite()
+    {
+        return this -> _fin_validite;
+    }
+
+    void Badge::setFinValidite (Date fin_validite)
+    {
+        this-> _fin_validite = fin_validite;

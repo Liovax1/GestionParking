@@ -10,7 +10,7 @@
 #define BADGE_H
 
 #include <iostream>
-#include "client_parking.h"
+#include "date.h"
 
 using namespace std;
 
@@ -22,16 +22,16 @@ public:
     ~Badge();
     string getNumero();
     void setNumero(string numero);
-    //Date getDebutValidite();
-    //void setDebutValidite (Date debut_validite);
-    //Date getFinValidite();
-    //void setFinValidite(Date fin_Validite);
+    Date getDebutValidite();
+    void setDebutValidite (Date debut_validite);
+    Date getFinValidite();
+    void setFinValidite(Date fin_Validite);
     friend std::ostream &operator<<(std::ostream& os, Badge const &B);
 
 private :
     string _numero;
-    //Date _debut_validite;
-    //Date _fin_validite;
+    Date _debut_validite;
+    Date _fin_validite;
 };
 
 #endif // BADGE_H

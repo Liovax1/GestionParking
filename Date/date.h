@@ -2,6 +2,8 @@
 #define DATE_H
 #include <iostream>
 
+using namespace std;
+
 /**
  * @file date.h
  * @brief Header-File de la classe Date
