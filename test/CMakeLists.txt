@@ -5,12 +5,15 @@ project(testProjet)
 set(SRCS2
     ${CMAKE_SOURCE_DIR}/Voiture/voiture.cpp
     ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.cpp
+    ${CMAKE_SOURCE_DIR}/Date/date.cpp
+
 )
 
 #2/3-Ajouter les dossiers/fichiers.h du projet
 set(HEADERS2
     ${CMAKE_SOURCE_DIR}/Client_parking/client_parking.h
     ${CMAKE_SOURCE_DIR}/Voiture/voiture.h
+    ${CMAKE_SOURCE_DIR}/Date/date.h
 )
 
 #3/3-Ajouter les dossiers/fichiers.cpp des tests unitaires
@@ -18,7 +21,11 @@ set(TST_SRCS
     1-TU_client_parking_E1.cpp
     1-TU_voiture_E1.cpp
     2-TU_composition_CP_Voiture_E2.cpp
+<<<<<<< HEAD
     3-TU_Badge.cpp
+=======
+    3-TU_Date.cpp
+>>>>>>> Date
     testProjet.cpp
 )
 
