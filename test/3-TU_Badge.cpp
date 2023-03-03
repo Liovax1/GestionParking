@@ -3,7 +3,11 @@
 #include <iostream>
 #include <sstream>
 
+<<<<<<< HEAD
 #include "date.h"
+=======
+//#include "date.h"
+>>>>>>> 88860ef47c5c285a60ce706aa7d083b4ab55a686
 #include "badge.h"
 
 using Catch::Matchers::EndsWith;
