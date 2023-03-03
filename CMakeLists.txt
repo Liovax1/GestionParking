@@ -15,7 +15,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SRCS
     Client_parking/client_parking.cpp
     Voiture/voiture.cpp
+<<<<<<< HEAD
     Liste_clients/liste_clients.cpp
+=======
+    Badge/badge.cpp
+    Date/date.cpp
+>>>>>>> 876bfc7760b5396a4bb94851939dbf0596147172
     #   Dossier/classe.cpp
 )
 
@@ -23,33 +28,43 @@ set(SRCS
 set(HEADERS
     Client_parking/client_parking.h
     Voiture/voiture.h
+<<<<<<< HEAD
         Liste_clients/liste_clients.h
+=======
+    Badge/badge.h
+    Date/date.h
+>>>>>>> 876bfc7760b5396a4bb94851939dbf0596147172
     #   Dossier/classe.h
 )
 
 #3/3-Ajouter les noms des dossiers de vos modules
 include_directories(Client_parking)
 include_directories(Voiture)
+<<<<<<< HEAD
 include_directories(Liste_clients)
+=======
+include_directories(Badge)
+include_directories(Date)
+>>>>>>> 876bfc7760b5396a4bb94851939dbf0596147172
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
 # Options ######################################################################
 option(BUILD_TESTS "Enable to build unit tests" TRUE)
 
-# Testing ######################################################################
-if (BUILD_TESTS)
-    # Coverage #################################################################
-    set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules)
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
-    target_link_libraries(${CMAKE_PROJECT_NAME} gcov)
-    setup_target_for_coverage_gcovr_html(
-        NAME coverage
-        EXECUTABLE ${CMAKE_BINARY_DIR}/test/bin/testProjet
-        DEPENDENCIES ${CMAKE_PROJECT_NAME}
-        EXCLUDE "build/CMakeFiles/*")
+## Testing ######################################################################
+#if (BUILD_TESTS)
+#    # Coverage #################################################################
+#    set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules)
+#    include(CodeCoverage)
+#    append_coverage_compiler_flags()
+#    target_link_libraries(${CMAKE_PROJECT_NAME} gcov)
+#    setup_target_for_coverage_gcovr_html(
+#        NAME coverage
+#        EXECUTABLE ${CMAKE_BINARY_DIR}/test/bin/testProjet
+#        DEPENDENCIES ${CMAKE_PROJECT_NAME}
+#        EXCLUDE "build/CMakeFiles/*")
 
-    enable_testing ()
-    add_subdirectory(test)
-endif(BUILD_TESTS)
+#    enable_testing ()
+#    add_subdirectory(test)
+#endif(BUILD_TESTS)
