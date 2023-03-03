@@ -52,10 +52,25 @@ int main()
     cout << "Immatriculation Voiture 2: " << voiture_2.getImmatriculation() << endl;
 
 
-    Badge Badge1 ("******", "01/01/1900", "31/12/2022");
-    cout << "Numero = " << Badge1.getNumero() << endl;
-    cout << "Debut_validite = " << Badge1.getDebutValidite << endl;
-    cout << "Fin_validite = " << badge1.getFinValidite << endl;
+//    Badge Badge1 ("******", "01/01/1900", "31/12/2022");
+//    cout << "Numero = " << Badge1.getNumero() << endl;
+//    cout << "Debut_validite = " << Badge1.getDebutValidite() << endl;
+//    cout << "Fin_validite = " << Badge1.getFinValidite() << endl;
+
+//    Badge nouveauBadge;
+//    cout << "Numero = " << nouveauBadge.getNumero() << endl;
+//    cout << "DebutValidite = " << nouveauBadge.getDebutValidite() << endl;
+//    cout << "FinValidite = " << nouveauBadge.getFinValidite() << endl;
+
+//    cout << "Infos nouveau badge : " << endl;
+//    nouveauBadge.setNumero("1722187161");
+//    nouveauBadge.setDebutValidite("13/02/1999");
+//    nouveauBadge.setFinValidite("31/12/2023");
+
+//    cout << "Numero = " << nouveauBadge.getNumero() << endl;
+//    cout << "Prenom = " << nouveauBadge.getDebutValidite() << endl;
+//    cout << "Prenom = " << nouveauBadge.getFinValidite() << endl;
+
 
     return 0;
 }
