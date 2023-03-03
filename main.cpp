@@ -9,7 +9,7 @@
 #include <iostream>
 #include "client_parking.h"
 #include "voiture.h"
-//#include "badge.h"
+#include "badge.h"
 
 using namespace std;
 
@@ -52,10 +52,10 @@ int main()
     cout << "Immatriculation Voiture 2: " << voiture_2.getImmatriculation() << endl;
 
 
-    //Badge Badge1 ("******", "01/01/1900", "31/12/2022");
-    //cout << "Numero = " << Badge1.getNumero() << endl;
-    //cout << "Debut_validite = " << Badge1.getDebutValidite() << endl;
-    //cout << "Fin_validite = " << Badge1.getFinValidite() << endl;
+//    Badge Badge1 ("******", "01/01/1900", "31/12/2022");
+//    cout << "Numero = " << Badge1.getNumero() << endl;
+//    cout << "Debut_validite = " << Badge1.getDebutValidite() << endl;
+//    cout << "Fin_validite = " << Badge1.getFinValidite() << endl;
 
 //    Badge nouveauBadge;
 //    cout << "Numero = " << nouveauBadge.getNumero() << endl;
@@ -74,4 +74,3 @@ int main()
 
     return 0;
 }
-

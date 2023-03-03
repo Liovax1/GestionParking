@@ -17,6 +17,7 @@ set(SRCS
     Voiture/voiture.cpp
     Badge/badge.cpp
     Date/date.cpp
+    Liste_clients/liste_clients.cpp
     #   Dossier/classe.cpp
 )
 
@@ -26,6 +27,7 @@ set(HEADERS
     Voiture/voiture.h
     Badge/badge.h
     Date/date.h
+    Liste_clients/liste_clients.h
     #   Dossier/classe.h
 )
 
@@ -34,6 +36,7 @@ include_directories(Client_parking)
 include_directories(Voiture)
 include_directories(Badge)
 include_directories(Date)
+include_directories(Liste_clients)
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 

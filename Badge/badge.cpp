@@ -87,3 +87,4 @@ Badge::Badge(string numero, unsigned int debutJ, unsigned int debutM, unsigned i
 //    void Badge::setFinValidite (Date fin_validite)
 //    {
 //        this-> _fin_validite = fin_validite;
+
