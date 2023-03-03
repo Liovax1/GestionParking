@@ -13,8 +13,8 @@ using namespace std;
 
 Badge::Badge()
     : _numero("******")
-    , _debut_validite("01/01/1900")
-    , _fin_validite(31/12/2022)
+//    , _debut_validite("01/01/1900")
+//    , _fin_validite("31/12/2022")
 {
     cout << "Initialisation : " << endl;
 }
@@ -46,7 +46,7 @@ void Badge::setNumero(string fin_validite) {
     this-> _fin_validite = fin_validite;
 }
 
-//Badge::Badge (string numero, unsigned int debutJ, unsigned int debutM, unsigned int debutA, unsigned int finJ, unsigned int finM, unsigned int finA)
-//{
+Badge::Badge (string numero, unsigned int debutJ, unsigned int debutM, unsigned int debutA, unsigned int finJ, unsigned int finM, unsigned int finA)
+{
 
-//}
+}
